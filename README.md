@@ -48,7 +48,7 @@ This ensures the system responds to intentional lighting changes while ignoring 
          D2 ─── [220Ω] ─── [LED] ─── GND
 ```
 
-See [schematic.png](schematic.png) and [layout.png](layout.png) for detailed circuit diagrams.
+See [schematic.png](schematic.png) and [wiring_diagram.png](wiring_diagram.png) for detailed circuit diagrams.
 
 ### Pin Connections
 
@@ -197,25 +197,12 @@ The optional LED on pin D2:
 
 ## 📚 Documentation
 
-Complete documentation is available:
+The code includes comprehensive inline Doxygen comments that document:
+- Algorithm implementation details
+- Function parameters and return values
+- System architecture and design decisions
 
-- **[HTML Documentation](docs/html/index.html)** - Full interactive API docs (Doxygen)
-- **[Markdown Documentation](docs/MouseWiggler.md)** - Quick reference
-- **[Randomization Guide](RANDOMIZATION.md)** - Detailed explanation of evasion features
-- **[Documentation Guide](README_DOCS.md)** - How to regenerate docs
-
-### Generate Documentation
-
-**Windows:**
-```batch
-generate_docs.bat
-```
-
-**Linux/macOS:**
-```bash
-chmod +x generate_docs.sh
-./generate_docs.sh
-```
+Refer to the comments in [MouseWiggler.ino](MouseWiggler.ino) for detailed technical information.
 
 ## 🎓 Algorithm Details
 
@@ -299,20 +286,9 @@ Benefits:
 MouseWiggler/
 ├── MouseWiggler.ino      # Main Arduino sketch with randomization
 ├── README.md             # This file - project overview
-├── README_DOCS.md        # Documentation generation guide
-├── RANDOMIZATION.md      # Detailed randomization feature guide
-├── Doxyfile              # Doxygen configuration
-├── generate_docs.bat     # Windows doc generator
-├── generate_docs.sh      # Linux/macOS doc generator
-├── ino2md.py             # .ino to Markdown converter
-├── xml2md.py             # Doxygen XML to Markdown converter
-├── schematic.png         # Circuit schematic
-├── layout.png            # PCB layout
-├── sketch.json           # Arduino project metadata
-└── docs/                 # Generated documentation
-    ├── MouseWiggler.md   # API reference (auto-generated)
-    ├── html/             # HTML documentation (auto-generated)
-    └── xml/              # Doxygen XML files (auto-generated)
+├── schematic.png         # Circuit schematic diagram
+├── wiring_diagram.png    # Wiring/breadboard diagram
+└── sketch.json           # Arduino project metadata
 ```
 
 ## 🤝 Contributing

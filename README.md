@@ -52,11 +52,11 @@ See [schematic.png](schematic.png) and [wiring_diagram.png](wiring_diagram.png) 
 
 ### Pin Connections
 
-| Component | Arduino Pin |
-|-----------|-------------|
-| Photocell VCC | A1 (Digital High) |
-| Photocell Sense | A0 (Analog Input) |
-| Photocell/Resistor GND | D15 (Digital Low) |
+| Component                | Arduino Pin               |
+| ------------------------ | ------------------------- |
+| Photocell VCC            | A1 (Digital High)         |
+| Photocell Sense          | A0 (Analog Input)         |
+| Photocell/Resistor GND   | D15 (Digital Low)         |
 | LED Indicator (optional) | D2 (with resistor to GND) |
 
 ## 💡 How It Works
@@ -74,13 +74,13 @@ The system uses a **dual-criteria approach** to detect meaningful light changes:
 
 ### Example Scenarios
 
-| Scenario | Magnitude | Rate | Action |
-|----------|-----------|------|--------|
-| Light switch ON | High | High | ✅ Enable wiggling |
-| Light switch OFF | High | High | ✅ Disable wiggling |
-| Sunset/Sunrise | High | Low | ❌ Ignore (gradual) |
-| Clouds passing | Medium | Low | ❌ Ignore (gradual) |
-| Random noise | Low | Variable | ❌ Ignore (insignificant) |
+| Scenario         | Magnitude | Rate     | Action                   |
+| ---------------- | --------- | -------- | ------------------------ |
+| Light switch ON  | High      | High     | ✅ Enable wiggling        |
+| Light switch OFF | High      | High     | ✅ Disable wiggling       |
+| Sunset/Sunrise   | High      | Low      | ❌ Ignore (gradual)       |
+| Clouds passing   | Medium    | Low      | ❌ Ignore (gradual)       |
+| Random noise     | Low       | Variable | ❌ Ignore (insignificant) |
 
 ### Mouse Wiggle Pattern
 
@@ -266,19 +266,19 @@ Benefits:
 
 ## 🔬 Technical Specifications
 
-| Parameter | Value | Unit |
-|-----------|-------|------|
-| Sampling Rate | 100 | Hz |
-| ADC Resolution | 10 | bits (0-1023) |
-| Analysis Period | 1 | second |
-| History Depth | 5 | seconds |
-| Base Wiggle Period | 10 | seconds |
-| Wiggle Period Range | 7-13 | seconds (randomized) |
-| Mouse Movement | ±1 | pixels |
-| Movement Directions | 4 | diagonals (random) |
-| Default Threshold | 15 | % change |
-| Default Rate | 5 | % per sample |
-| Random Seed Sources | ADC noise + millis() | - |
+| Parameter           | Value                | Unit                 |
+| ------------------- | -------------------- | -------------------- |
+| Sampling Rate       | 100                  | Hz                   |
+| ADC Resolution      | 10                   | bits (0-1023)        |
+| Analysis Period     | 1                    | second               |
+| History Depth       | 5                    | seconds              |
+| Base Wiggle Period  | 10                   | seconds              |
+| Wiggle Period Range | 7-13                 | seconds (randomized) |
+| Mouse Movement      | ±1                   | pixels               |
+| Movement Directions | 4                    | diagonals (random)   |
+| Default Threshold   | 15                   | % change             |
+| Default Rate        | 5                    | % per sample         |
+| Random Seed Sources | ADC noise + millis() | -                    |
 
 ## 📂 Repository Structure
 
@@ -323,7 +323,5 @@ The use of this software is done at your own discretion and risk and with agreem
 - All contributors to the Arduino ecosystem
 
 ---
-
-**Questions?** Check the [documentation](docs/MouseWiggler.md) or open an issue!
 
 **Like this project?** Give it a ⭐ on GitHub!
